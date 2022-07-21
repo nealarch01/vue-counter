@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: "/vue-counter/"
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/hello-world/'
+    : '/'
 }
