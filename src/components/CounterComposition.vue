@@ -5,8 +5,8 @@
         <div class="counter-text-container">
             <h1>Count:</h1>
             <h1 v-if="count > 0" class="positive">{{ count }}</h1>
-            <h1 v-if="count < 0" class="negative">{{ count }}</h1>
-            <h1 v-if="count === 0" class="neither">{{ count }}</h1>
+            <h1 v-else-if="count < 0" class="negative">{{ count }}</h1>
+            <h1 v-else-if="count === 0" class="neither">{{ count }}</h1>
         </div>
         <div class="counter-btns">
             <button class="counter-btn" id="decrement-btn" @click="decrementCount()">
